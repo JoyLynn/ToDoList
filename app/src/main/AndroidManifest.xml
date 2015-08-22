@@ -15,6 +15,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <uses-permission android:name="android.permission.INTERNET" />
+
+                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            </intent-filter>
         </activity>
     </application>
 
