@@ -12,6 +12,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Parse.initialize(this, "APP_ID", "CLIENT_ID");
+        ParseAnalytics.trackAppOpened(getIntent());
     }
 
     @Override
