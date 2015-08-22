@@ -13,6 +13,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Parse.initialize(this, "APP_ID", "CLIENT_ID");
+        ParseObject.registerSubclass(Task.class);
         ParseAnalytics.trackAppOpened(getIntent());
     }
 
