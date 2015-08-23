@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.ListView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,9 +14,13 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Parse.initialize(this, "APP_ID", "CLIENT_ID");
         ParseObject.registerSubclass(Task.class);
         ParseAnalytics.trackAppOpened(getIntent());
+
+        mTaskInput = (EditText)findViewById(R.id.task_input);
+        mListView = (ListView)findViewById(R.id.task_list);
     }
 
     @Override
