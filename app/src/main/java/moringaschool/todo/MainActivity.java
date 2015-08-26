@@ -15,13 +15,15 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Parse.initialize("kZwedzK87ic1wwWuWJ1KXaJXVzDkU4K9Z3udJa9R", "yVJ37z91g62KgQDUfcmsCfHGWAzvfdgaJqbJd1Ae");
-        ParseObject.registerSubclass(Task.class);
-        ParseAnalytics.trackAppOpened(getIntent());
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, "kZwedzK87ic1wwWuWJ1KXaJXVzDkU4K9Z3udJa9R", "yVJ37z91g62KgQDUfcmsCfHGWAzvfdgaJqbJd1Ae");
 
-        mTaskInput = (EditText)findViewById(R.id.task_input);
-        mListView = (ListView)findViewById(R.id.task_list);
-    }
+//        ParseObject.registerSubclass(Task.class);
+//        ParseAnalytics.trackAppOpened(getIntent());
+//
+//        mTaskInput = (EditText)findViewById(R.id.task_input);
+//        mListView = (ListView)findViewById(R.id.task_list);
+   }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
