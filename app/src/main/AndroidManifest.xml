@@ -1,4 +1,3 @@
-<<<<<<< Original
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="moringaschool.todo" >
@@ -24,16 +23,3 @@
     </application>
 
 </manifest>
-
-=======
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <application>
-        <activity android:name="moringaschool.todo.TaskAdapter"
-            android:label="@string/title_activity_task_adapter"
-            >
-        </activity>
-    </application>
-
-</manifest>
->>>>>>> Added
